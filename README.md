@@ -1,6 +1,6 @@
 # ADSO3564995
 ## Juan David Ramirez Saavedra 
-![profile picture](src/images/supercampeon.webp)
+![profile picture](src/images/supercampeon2.webp)
 
 ***CENTRO CPIC - ADSO***
 >SENA REGIONAL CALDAS
