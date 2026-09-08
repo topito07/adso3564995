@@ -5,8 +5,30 @@
 body {
     background: linear-gradient(to top, #075fab, #063283);
 
+    &.html {
+        background: linear-gradient(to top, #e44d26, #1f0a05);
+        background-attachment: fixed;
+        color: #f9966baa;
+
+        main {
+            header.mmenu {
+                h1 {
+                    border-bottom: 2px solid #f9966baa;
+                }
+
+
+
+                img {
+                    border: 4px solid #f9966baa;
+                }
+            }
+        }
+    }
+
+
     &.emmet {
         background: linear-gradient(to top, #7acb16, #192a05);
+        background-attachment: fixed;
         color: #baffa9aa;
 
         main {
@@ -21,7 +43,11 @@ body {
                     border: 4px solid #baffa933;
                 }
             }
-
+        }
+    }
+    color: #fff8;
+    font-family: Poppins;
+    min-height: 100dvh;
             section {
                 h2.subtitle {
                     background-color: #7acb16;
@@ -65,11 +91,10 @@ body {
                 }
             }
         }
-    }
+    
 
-    color: #fff8;
-    font-family: Poppins;
-    min-height: 100dvh;
+    
+    
 
     nav.goback {
         align-items: center;
@@ -223,4 +248,3 @@ body {
             }
         }
     }
-}
