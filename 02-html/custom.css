@@ -1,0 +1,12 @@
+div.box{
+    background: linear-gradient(to bottom, #e44d26, #0009);
+    background-clip:  text;
+    color: transparent;
+    font-size: 7.4rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 2rem auto;
+    width: 340px;
+    animation: 1s animText ease-in infinite;    
+}
+
