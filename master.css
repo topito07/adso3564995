@@ -23,6 +23,10 @@ body {
                 img {
                     border: 4px solid #caa0f5aa;
                 }
+                ul, ol {
+                    color: #fff9;
+                    text-align: left;
+                }
             }
 
             menu.mmenu {
