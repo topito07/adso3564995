@@ -5,6 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>17-visualization</title>
     <link rel="stylesheet" href="../master.css">
+    <style>
+        div.parent {
+            background-color: #663399cc;
+            border: 2px solid #0009;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            gap: 1rem;
+            margin: 20px auto;
+            width: 180px;
+        }
+        div.child {
+            background-color: #fff;
+            border: 2px solid #663399;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 41px;
+            width: 41px;
+        }
+        div.child.none {
+            display: none;
+        }
+        div.child.hidden {
+            visibility: hidden;
+        }
+        div.parent-box {
+            background-color: #663399cc;
+            display: flex;
+            margin: 2rem auto;
+            gap: 10px;
+        }
+        div.parent-box.mt {
+            margin-top: 7rem;
+        }
+        div.box {
+            border: 2px solid #fff9;
+            height: 180px;
+            padding: 4px;
+        }
+        main section div.box p {
+            color: #fff;
+            font-size: 0.6rem;
+            text-align: justify;
+        }
+        section div.box h4 {
+            background-color: #0009;
+            color: #fffc;
+            font-size: 0.7rem;
+            text-align: center;
+            padding: 4px;
+            margin: 0;
+        }
+        div.box2 {
+            overflow: hidden;
+        }
+        div.box3 {
+            overflow: scroll;
+        }
+        div.element {
+
+            width: 100px;
+            font-size: 3.4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 80px;
+        }
+        div.parent-element {
+            display: flex;
+            margin: 20px auto;
+            gap: 10px;
+            padding-bottom: 4rem;
+        }
+        div.element1 {
+            background-color: #ffcd00;
+            left: 60px;
+            z-index: 1;
+        }
+        div.element2 {
+            background-color: #003087   ;
+            left: 10px;
+            top: 30px;
+            z-index: 2;
+        }
+        div.element3 {
+            background-color: #c8102e;
+            left: -30px;
+            top: 60px;
+            z-index: 3;
+        }
+    </style>
 </head>
 <body class="css">
     <nav class="goback">
@@ -19,7 +113,14 @@
         <header class="mmenu internal">
             <h1>17-visualization</h1>
             <img src="../src/images/logo-css.png" alt="css">
-            <h3>Description</h3>
+            <h3>
+                <ul>
+                <li>Display: block|inline|none|flex|grid</li>
+                <li>Visibility: visible|hidden</li>
+                <li>Overflow: visible|hidden|scroll|auto</li>
+                <li>Z-Index: 1...n</li>
+            </ul>
+        </h3>
         </header>
         <section>
             <h3 class="subtitle">Child 5 = display: none</h3>

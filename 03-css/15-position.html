@@ -5,6 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>15-position</title>
     <link rel="stylesheet" href="../master.css">
+    <style>
+        div.parent {
+            border: 2px solid #fffa;
+            background-color: #fff9;
+            margin: 2rem auto;
+            padding: 2rem;
+            position: relative;
+            min-height: 130px;
+            width: 260px;
+        }
+        div.child {
+            background-color: #333;
+            color: #fff9;
+            padding: 0.4rem;
+            text-align: center;
+            width: 80px;
+        }
+        div.relative {
+            position: relative;
+            top: -20px;
+            left: 130px
+        }
+        div.absolute {
+            position: absolute;
+            bottom: 14px;
+            left: 14px;
+        }
+        div.fixed {
+            position: fixed;
+            top: 600px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9;
+        }
+        div.sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 20px;
+            width: 100%;
+        }
+        main section div.parent p {
+            color: #333;
+            font-size: 0.8rem !important;
+            text-align: justify;
+        }
+        main section div.parent:last-of-type {
+            margin-bottom: 48rem;
+        }
+    </style>
 </head>
 <body class="css">
     <nav class="goback">
@@ -19,7 +68,14 @@
         <header class="mmenu internal">
             <h1>15-position</h1>
             <img src="../src/images/logo-css.png" alt="css">
-            <h3>Description</h3>
+            <h3><ul>
+                <li>Normal/Static</li>
+                <li>Relative</li>
+                <li>Absolute</li>
+                <li>Fixed</li>
+                <li>Sticky</li>
+            </ul>
+        </h3>
         </header>
         <section>
             <h3 class="subtitle">Relative</h3>
