@@ -5,6 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>20-pseudoclasses</title>
     <link rel="stylesheet" href="../master.css">
+    <style>
+        section {
+            menu.options {
+                padding: 0;
+                a:link, a:visited {
+                    border: 2px solid #fff9;
+                    color: #fff9;
+                    text-decoration: none;
+                    padding: 0.2rem 0.5rem;
+                }
+                a:hover {
+                    color: #fff;
+                    background-color: #663399;
+                    
+                }
+                a:active {
+                    background-color: #dc143c;
+                }
+                a:first-child {
+                    pointer-events: none;
+                    opacity: 0.5;
+
+                }
+                
+                
+            }
+            input {
+                border-radius: 0.2rem;
+                padding: 0.4rem 0.8rem;
+                margin-bottom: 0.4rem;
+                &:focus {
+                    outline: none;
+                    border: 2px solid #fff;
+                    color: #fff;
+                    background-color: #663399;
+                    &::placeholder {
+                        color: #fff;
+                    }
+                }
+                
+
+            }
+            p.paragraph {
+                &::first-letter {
+                    font-size: 4rem;
+                    font-family: 'Times New Roman';
+                    color: #71ef71;
+                }
+                &::first-line {
+                    background-color: #71ef7166;
+                }
+            }
+            div.heart {
+                position: relative;
+                height: 100px;
+                &::after, &::before {
+                    background-color: #ae70ed;
+                    border-radius: 25px 25px 0 0;
+                    position: absolute;
+                    content: "";
+                    transform: rotate(-45deg);
+                    top: 0px;
+                    left: 120px;
+                    width: 50px;
+                    height: 80px;
+                }
+                &::after{
+                    left: 142px;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    </style>
 </head>
 <body class="css">
     <nav class="goback">
@@ -21,7 +94,24 @@
             <img src="../src/images/logo-css.png" alt="css">
             <h3>Is used to define a special state of an element.</h3>
         <section>
-            <h3 class="subtitle">subtitle</h3>
+            <h3 class="subtitle">:link|:hover|:active|:visited</h3>
+            <h4>:first-child|:last-child</h4>
+            <menu class="options">
+                <a href="#">Option 1</a>
+                <a href="#">Option 2</a>
+                <a href="#">Option 3</a>
+                <a href="#">Option 4</a>
+            </menu>
+            <h3 class="subtitle">:focus|:blur</h3>
+            <input type="text" placeholder="Enter your First Name">
+            <br>
+            <input type="text" placeholder="Enter your Last Name">
+            <h3 class="subtitle">:first-letter|:first-line</h3>
+            <p class="paragraph">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam est fugit omnis.
+            </p>
+            <h3 class="subtitle">:before|:after</h3>
+            <div class="heart"></div>
         </section>
     </main>
 </body>
