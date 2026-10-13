@@ -1,51 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>24-challenge-layout</title>
     <style>
-       body{
-        background-color: #17a053;
-        border: 10px solid #fff;
-        padding: 0;
-        margin: 0;
-        min-height: 100dvh;
-        main{
-            border: 4px solid #0009;
-            margin: 0 auto;
-            width: 960px;
+        body {
+            background-color: #17a053;
+            border: 10px solid #fff;
+            padding: 0;
+            margin: 0;
+            min-height: 100dvh;
 
-            header{
-           figure.logo {
-              background: url(imgs/spriteweb.png) no-repeat;
-              background-position: -20px -430px;
-              height: 130px;
-              margin: 2rem auto;
-              width: 170px;
-              border: 4px solid blue;
+            main {
+                margin: 0 auto;
+                width: 960px;
 
-              
-           }
+                header {
+                    figure.logo {
+                        background: url(imgs/spriteweb.png) no-repeat;
+                        background-position: -20px -430px;
+                        height: 130px;
+                        margin: 2rem auto;
+                        width: 170px;
+                    }
+
+                    menu {
+                        display: flex;
+                        justify-content: center;
+                        margin: 0;
+                        padding: 0;
+                    
+
+                        a {
+                            background-color: #14532d;
+                            color: white;
+                            font-size: 14px;
+                            padding: 14px 40px;
+                            border-bottom: 5px solid #fff;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+
+                section {
+                    display: flex;
+                    justify-content: center;
+                    background-color: #14532d;
+                    padding: 20px;
+                    margin-top: 2rem;
+
+                    .sprites {
+                        width: 300px;
+                        height: 190px;
+                        border: 2px solid white;
+                        background: url(imgs/spriteweb.png) no-repeat;
+                        background-position: -472px -7px;
+                        position: relative;
+                        margin-left: 8px;
+                        margin-right: 8px;
+                    }
+
+                    h3 {
+                        margin: 0;
+                        padding: 10px 0;
+                        text-align: center;
+                        font-size: 18px;
+                        color: #000;
+                        background-color: #fff3;
+                        font-weight: 800;
+                    }
+                }
+            }
+
+            section.contenido {
+                background-color: #14532d;
+                width: 960px;
+                padding: 10px;
+                margin: 2rem auto 0;
+                
+
+
+                div.parent {
+                    background-color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 10px 20px;
+                    margin-bottom: 10px;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+
+                    div.left,
+                    div.right {
+                        background: url(imgs/spriteweb.png) no-repeat;
+                        flex-shrink: 0;
+                    }
+
+                    div.left {
+                        width: 80px;    
+                        height: 80px;
+                        background-position: -300px -499px;
+                    }
+
+                    div.right {
+                        width: 150px;     
+                        height: 200px;
+                        background-position: -60px -190px;
+                    }
+
+                    div.text {
+                        flex: 1;
+                        padding: 0 30px;
+                        color: #14532d;
+                        text-align: justify;
+
+                        p {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            footer {
+                background-color: #fff;
+                
+                width: 960px;
+                padding: 10px;
+                margin: 2rem auto 0;
+            
+                
+                div.productos {
+                    background: url(imgs/spriteweb.png) no-repeat;
+                    background-position: -520px -445px;  
+                    width: 220px;                         
+                    height: 160px;                        
+                    margin: auto;
+                    
+                }
+                nav {
+        display: flex;
+        text-align: center;
+
+        a {
+           background-color: #fff;
+                            color: #000;
+                            font-size: 14px;
+                            padding: 14px 40px;
+                            border-bottom: 5px solid #fff;
+                            text-transform: uppercase;
         }
     }
+}
+
+        }
         
-       }
     </style>
 </head>
+
 <body>
     <main>
         <header>
             <figure class="logo"></figure>
             <menu>
-                <a href="inicio"></a>
-                <a href="Nosotros"></a>
-                <a href="Portafolio"></a>
-                <a href="Servicios"></a>
-                <a href="Contacto"></a>
+                <a href="">inicio</a>
+                <a href="">Nosotros</a>
+                <a href="">Portafolio</a>
+                <a href="">Servicios</a>
+                <a href="">Contacto</a>
             </menu>
         </header>
+        <section>
+
+            <div class="sprites">
+                <h3>Sprite 01</h3>
+            </div>
+            <div class="sprites">
+                <h3>Sprite 02</h3>
+            </div>
+            <div class="sprites">
+                <h3>Sprite 03</h3>
+            </div>
+        </section>
     </main>
-    
+    <section class="contenido">
+        <div class="parent">
+            <div class="left"></div>
+            <div class="text">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit enim dolorem beatae mollitia
+                    et voluptatum numquam, nostrum recusandae neque explicabo id sint sequi quae odit unde suscipit?
+                    Quas, voluptate debitis.
+                </p>
+            </div>
+            <div class="right"></div>
+        </div>
+        <div class="parent">
+            <div class="left"></div>
+            <div class="text">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit enim dolorem beatae mollitia
+                    et voluptatum numquam, nostrum recusandae neque explicabo id sint sequi quae odit unde suscipit?
+                    Quas, voluptate debitis.
+                </p>
+            </div>
+            <div class="right"></div>
+        </div>
+        <div class="parent">
+            <div class="left"></div>
+            <div class="text">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit enim dolorem beatae mollitia
+                    et voluptatum numquam, nostrum recusandae neque explicabo id sint sequi quae odit unde suscipit?
+                    Quas, voluptate debitis.
+                </p>
+            </div>
+            <div class="right"></div>
+        </div>
+    </section>
+    <footer>
+        <div class="productos"></div>
+    <nav>
+        <a href="">inicio</a>
+        <a href="">Nosotros</a>
+        <a href="">Portafolio</a>
+        <a href="">Servicios</a>
+        <a href="">Contacto</a>
+    </nav>
+</footer>
+
 </body>
+
 </html>
