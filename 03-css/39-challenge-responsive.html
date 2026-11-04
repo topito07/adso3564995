@@ -86,11 +86,12 @@
                 section {
                     article {
                         display: flex;
-                        padding: 1.5rem;
-                        width: 420px;
-                        height: 380px;
+                        align-items: center;
+                        width: 100%; /* Restaurado a 100% para que abarque bien el espacio horizontal */
+                        height: 280px; /* Altura original de escritorio */
                         background: #263238;
                         color: white;
+                        overflow: hidden; /* Vuelve a ocultar lo que sobra en los bordes */
                         margin: 2rem auto;
                         border-radius: 1.4rem;
 
@@ -113,7 +114,7 @@
 
                         p {
                             text-transform: uppercase;
-                            color: #fff9;
+                            color: #fff;
                             display: block;
 
                         }
@@ -121,14 +122,14 @@
                         &:first-of-type {
                             box-shadow: 0 0 40px 0 #f00;
 
-
                         }
                     }
                 }
 
+                /* Tamaño único para la imagen de Kakashi en escritorio */
                 section:last-of-type article img {
-                    width: 420px;
-                    height: 420px;
+                    width: 300px;
+                    height: 100%;
                 }
 
             }
@@ -173,7 +174,7 @@
         }
 
 
-        /* Breakpoint: 860px */
+        /* Breakpoint: 860px (Celular) */
 
         @media (max-width: 860px) {
             body {
@@ -193,16 +194,23 @@
                                 margin-bottom: 0.8rem;
                                 width: 330px;
                                 height: 300px;
-
-
                             }
                         }
                     }
 
                     section {
                         article {
-                            flex-direction: column;
-                            height: 700px;
+                            flex-direction: column; /* Pone el texto abajo en celular */
+                            height: auto;           /* Permite que la tarjeta crezca hacia abajo */
+                            overflow: visible;      /* Evita que se corte el texto abajo en celular */
+                            text-align: center;
+                            padding: 1.5rem;
+
+                            img {
+                                width: 220px;
+                                height: 220px;
+                                margin-bottom: 1rem;
+                            }
                         }
 
                         h2 {
@@ -216,7 +224,6 @@
                         }
                     }
                 }
-
             }
         }
     </style>
