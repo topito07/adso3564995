@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +9,20 @@
         * {
             transition: all 0.4s ease;
         }
+
         body {
-            background: url(imgs/narutofondo.jpg) no-repeat center;
+            background: url(imgs/narutofondo.jpg) no-repeat center / cover;
             color: #fff;
             font-family: sans-serif;
             padding: 0;
             margin: 0;
 
             main {
-                border: 10px solid #fff;
+
                 padding: 1rem;
-                margin: 2rem auto;
-                width: 1228px; /* 1280 - (20px +32px) */
+                margin: 0 auto;
+                width: 1228px;
+                /* 1280 - (20px +32px) */
 
                 header {
                     figure.logo {
@@ -34,40 +37,100 @@
                         margin: 0;
                         padding: 0;
 
+
                         a:is(:link, :visited) {
-                            background: #fff;
-                            color: #013571;
-                            font-size: 1.2rem;
+                            background: url(imgs/Naruto\ Profil\ Picture.jpeg) no-repeat center/ cover;
+                            color: #f00;
+                            text-decoration: #f00;
+                            font-size: 1.8rem;
                             padding: 1.4rem 1rem;
                             display: inline-block;
                             text-align: center;
                             text-decoration: none;
-                            width: 270px;
+                            width: 243px;
+                            height: 243px;
+                            border-radius: 2rem;
+                            margin: 0.5rem;
+                            border: 6px solid white;
+
+
+                            &:nth-of-type(2) {
+                                background: url(imgs/itachi.jpg) no-repeat center /cover;
+                            }
+
+                            &:nth-of-type(3) {
+                                background: url(imgs/sasuke.jpg) no-repeat center /cover;
+                            }
+
+                            &:nth-of-type(4) {
+                                background: url(imgs/kakashi.jpg) no-repeat center/cover;
+                            }
 
                             &:hover {
-                                background: linear-gradient(#013571 90%, #fff 90%);
                                 transform: translateY(10px);
-                                color: #fff;
+                                filter: invert();
+                                color: #000;
+                                font-weight: bold;
+                                font-size: 3rem;
+                                text-shadow: 2px 2px 2px #000;
+                                box-shadow: 0 0 20px #f00;
+
                             }
+
+
+
                         }
                     }
                 }
+
                 section {
-                    h2 {
-                        text-align: center;
-                        font-size: 2.8rem;
+                    article {
+                        display: flex;
+                        padding: 1.5rem;
+                        width: 420px;
+                        height: 380px;
+                        background: #263238;
+                        color: white;
+                        margin: 2rem auto;
+                        border-radius: 1.4rem;
 
-                        &:nth-of-type(2),
-                        &:last-of-type {
-                            display: none;
+                        img {
+                            width: 300px;
+                            height: 100%;
+                            object-fit: contain;
+                            object-position: bottom;
+                            display: inline-block;
+
+                        }
+
+                        h3 {
+                            color: #fff;
+                            font-size: 35px;
+                            margin: 0;
+                            border-bottom: 2px solid #fff;
+                            padding-bottom: 2rem;
+                        }
+
+                        p {
+                            text-transform: uppercase;
+                            color: #fff9;
+                            display: block;
+
+                        }
+
+                        &:first-of-type {
+                            box-shadow: 0 0 40px 0 #f00;
+
+
                         }
                     }
-
-                    p {
-                        line-height: 1.8rem;
-                        text-align: justify;
-                    }
                 }
+
+                section:last-of-type article img {
+                    width: 420px;
+                    height: 420px;
+                }
+
             }
         }
 
@@ -82,14 +145,14 @@
 
                     header {
                         figure.logo {
-                            background: url(imgs/crashed-and-burned-why-gave-naruto-the-otaku-don-1.png) no-repeat center;
-                            height: 370px;
-                            width: 612px;
+                            background: url(imgs/anbu.png) no-repeat center /cover;
+                            height: 320px;
+                            width: 322px;
                         }
 
                         menu {
                             a:is(:link, :visited) {
-                                width: 124px;
+                                width: 324px;
                             }
                         }
                     }
@@ -99,6 +162,7 @@
                             &:first-of-type {
                                 display: none;
                             }
+
                             &:nth-of-type(2) {
                                 display: block;
                             }
@@ -108,7 +172,7 @@
             }
         }
 
-        
+
         /* Breakpoint: 860px */
 
         @media (max-width: 860px) {
@@ -118,54 +182,105 @@
 
                     header {
                         figure.logo {
-                            background: url(imgs/kunai.png) no-repeat center;
+                            background: url(imgs/kamabobo.png) no-repeat center /contain;
                             height: 360px;
                             width: 360px;
                         }
 
                         menu {
                             a:is(:link, :visited) {
-                                display: block;
+                                display: inline-block;
                                 margin-bottom: 0.8rem;
                                 width: 330px;
+                                height: 300px;
+
+
                             }
                         }
                     }
 
                     section {
+                        article {
+                            flex-direction: column;
+                            height: 700px;
+                        }
+
                         h2 {
                             &:nth-of-type(2) {
                                 display: none;
                             }
+
                             &:last-of-type {
                                 display: block;
                             }
                         }
                     }
                 }
+
             }
         }
     </style>
 </head>
+
 <body>
     <main>
         <header>
             <figure class="logo"></figure>
             <menu>
-                <a href="">Naruto</a>
-                <a href="">Itachi</a>
-                <a href="">Sasuke</a>
-                <a href="">Kakashi</a>
+                <a href="naruto">Naruto</a>
+                <a href="itachi">Itachi</a>
+                <a href="sasuke">Sasuke</a>
+                <a href="kakashi">Kakashi</a>
             </menu>
         </header>
         <section>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et repellat pariatur possimus, quis quod soluta quo eius fuga, voluptatibus quam earum deleniti ab impedit exercitationem tempora nulla dignissimos temporibus. Animi placeat non, earum velit exercitationem eum obcaecati porro aspernatur est libero minus illum, dolorem nisi voluptatibus ipsa excepturi harum nostrum perferendis, id beatae nesciunt! Omnis ullam veniam alias et rem!
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et repellat pariatur possimus, quis quod soluta quo eius fuga, voluptatibus quam earum deleniti ab impedit exercitationem tempora nulla dignissimos temporibus. Animi placeat non, earum velit exercitationem eum obcaecati porro aspernatur est libero minus illum, dolorem nisi voluptatibus ipsa excepturi harum nostrum perferendis, id beatae nesciunt! Omnis ullam veniam alias et rem!
-            </p>
+            <article>
+                <h3>Naruto</h3>
+                <img src="imgs/narutop.png" alt="">
+
+                <p>Naruto Uzumaki es un ninja de la Aldea de la Hoja que sueña con convertirse en Hokage. Es alegre,
+                    impulsivo y perseverante. A pesar de haber sufrido rechazo durante su infancia, nunca abandona sus
+                    sueños. Su gran determinación, amistad y espíritu de superación lo convierten en uno de los ninjas
+                    más poderosos</p>
+            </article>
         </section>
+
+        <section>
+            <article>
+                <h3>Itachi</h3>
+                <img src="imgs/Itachip.png" alt="">
+
+                <p>Itachi Uchiha es un ninja prodigioso del clan Uchiha. Inteligente, tranquilo y extremadamente
+                    poderoso, tomó decisiones difíciles para proteger a su hermano Sasuke y evitar una guerra. Aunque
+                    muchos lo consideraron un traidor, detrás de sus acciones existía una historia de sacrificio, amor y
+                    lealtad hacia su familia.</p>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h3>Naruto</h3>
+                <img src="imgs/sasukep.png" alt="">
+
+                <p>Sasuke Uchiha es un ninja del clan Uchiha que busca vengar la muerte de su familia. Es serio,
+                    reservado y orgulloso. Su deseo de obtener poder lo lleva por un camino de oscuridad y venganza. Sin
+                    embargo, su historia representa la lucha entre el odio, la amistad y la redención.</p>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h3>Kakashi</h3>
+                <img src="imgs/Kakaship.png" alt="">
+
+                <p>Kakashi Hatake es un reconocido ninja de la Aldea de la Hoja y maestro del equipo siete. Es
+                    tranquilo, inteligente y estratégico. Conocido como el Ninja Copia por su Sharingan, posee grandes
+                    habilidades de combate. Aunque parece despreocupado, es un líder experimentado que valora
+                    profundamente la amistad y el trabajo en equipo.</p>
+            </article>
+        </section>
+
     </main>
 </body>
+
 </html>
