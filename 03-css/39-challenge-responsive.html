@@ -22,7 +22,7 @@
                 padding: 1rem;
                 margin: 0 auto;
                 width: 1228px;
-                /* 1280 - (20px +32px) */
+
 
                 header {
                     figure.logo {
@@ -87,11 +87,11 @@
                     article {
                         display: flex;
                         align-items: center;
-                        width: 100%; /* Restaurado a 100% para que abarque bien el espacio horizontal */
-                        height: 280px; /* Altura original de escritorio */
+                        width: 100%;
+                        height: 280px;
                         background: #263238;
                         color: white;
-                        overflow: hidden; /* Vuelve a ocultar lo que sobra en los bordes */
+                        overflow: hidden;
                         margin: 2rem auto;
                         border-radius: 1.4rem;
 
@@ -200,31 +200,84 @@
 
                     section {
                         article {
-                            flex-direction: column; /* Pone el texto abajo en celular */
-                            height: auto;           /* Permite que la tarjeta crezca hacia abajo */
-                            overflow: visible;      /* Evita que se corte el texto abajo en celular */
+                            height: auto;
+                            overflow: visible;
                             text-align: center;
-                            padding: 1.5rem;
+                            padding: 1rem;
+                            box-sizing: border-box;
+
+                            h3 {
+                                display: block;
+                                width: 100%;
+                                font-size: 30px;
+                            }
 
                             img {
+                                display: block;
                                 width: 220px;
                                 height: 220px;
-                                margin-bottom: 1rem;
-                            }
-                        }
-
-                        h2 {
-                            &:nth-of-type(2) {
-                                display: none;
+                                margin: 1rem auto;
                             }
 
-                            &:last-of-type {
+                            p {
                                 display: block;
+                                width: 100%;
+                                font-size: 14px;
                             }
                         }
                     }
                 }
             }
+        }
+
+        section {
+            article {
+                width: 100%;
+                height: 280px;
+                background: #263238;
+                color: white;
+                overflow: hidden;
+                margin: 2rem auto;
+                border-radius: 1.4rem;
+                text-align: center;
+                font-size: 0;
+
+                h3 {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 15%;
+                    font-size: 30px;
+                    color: #fff;
+                    margin: 0;
+                    border-bottom: 2px solid #fff;
+                    padding-bottom: 2rem;
+                }
+
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 25%;
+                    height: 100%;
+                    object-fit: contain;
+                    object-position: bottom;
+                }
+
+                p {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 55%;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    color: #fff;
+                }
+
+                &:first-of-type {
+                    box-shadow: 0 0 40px 0 #f00;
+                }
+            }
+        }
+        }
+        }
         }
     </style>
 </head>
